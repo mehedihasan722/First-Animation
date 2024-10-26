@@ -11,8 +11,8 @@ body {
 
 .bear {
   height: 25vmin;
-  -webkit-animation-name: spin;
-  animation-name: spin;
+  -webkit-animation-name: spin, vanish;
+  animation-name: spin, vanish;
   -webkit-animation-duration: 2s;
   animation-duration: 2s;
 }
@@ -28,5 +28,17 @@ body {
   to {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes vanish {
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes vanish {
+  50% {
+    opacity: 0;
   }
 }
